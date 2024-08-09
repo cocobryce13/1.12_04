@@ -37,8 +37,7 @@ int main()
 			up >> arr[i][j];
 		}
 	}
-
-
+	up.close();
 
 	for (int i = 0; i < rows; ++i)
 	{
@@ -49,6 +48,12 @@ int main()
 		std::cout << std::endl;
 	}
 
+	for (int i = 0; i < rows; i++)
+	{
+		delete[] arr [i];
+	}
+
+	delete[] arr;
 
 	return 0;
 }
